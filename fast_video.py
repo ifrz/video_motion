@@ -12,9 +12,9 @@ import threading
 def notify(frame, now):
     if (time.time() - now < 1): # prevent from notify to many frames
         return
-    bot = telegram.Bot(token='613818450:AAHD7sxmC9gJFQ_dulBt4Ajkxfk5JPHq5ZI')
+    bot = telegram.Bot(token='xxxx')
     # print(bot.get_me())
-    # curl https://api.telegram.org/bot613818450:AAHD7sxmC9gJFQ_dulBt4Ajkxfk5JPHq5ZI/getupdates
+    # curl https://api.telegram.org/botxxxx/getupdates
     cv2.imwrite("frame.jpg", frame)
     time.sleep(1) # to avoid send a corrupt image
     bot.send_message(chat_id='87534356', text="Somebody stole your beer!!")
